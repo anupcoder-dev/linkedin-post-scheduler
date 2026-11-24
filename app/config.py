@@ -1,7 +1,10 @@
 import logging, os, sys
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env", override=True)
 
 def _req(name: str) -> str:
     v = os.environ.get(name)

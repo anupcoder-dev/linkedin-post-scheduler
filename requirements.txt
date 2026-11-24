@@ -1,8 +1,8 @@
-fastapi==0.115.6
-uvicorn[standard]==0.34.0
-sqlalchemy==2.0.36
-httpx==0.28.1
-cryptography==44.0.0
-python-dotenv==1.0.1
-itsdangerous==2.2.0
-pytest==8.3.4
+fastapi>=0.115
+uvicorn[standard]>=0.34
+sqlalchemy>=2.0.44
+httpx>=0.28
+cryptography>=45
+python-dotenv>=1.0
+itsdangerous>=2.2
+pytest>=8.3
