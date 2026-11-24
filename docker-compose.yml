@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    env_file: .env
+    environment: { DATABASE_URL: "sqlite:////data/app.db" }
+    ports: ["8000:8000"]
+    volumes: ["db:/data"]
+  worker:
+    build: .
+    command: python -m app.worker
+    env_file: .env
+    environment: { DATABASE_URL: "sqlite:////data/app.db" }
+    volumes: ["db:/data"]
+volumes: { db: {} }
